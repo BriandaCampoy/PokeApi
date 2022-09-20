@@ -1,7 +1,7 @@
 const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-const API = 'https://pokeapi.co/api/v2/pokemon';
 
-function fetchData(urlApi, callback) {
+
+exports.fetchData=(urlApi, callback)=> {
     let xhttp = new XMLHttpRequest();
 
     xhttp.open('GET', urlApi, true);
@@ -18,7 +18,7 @@ function fetchData(urlApi, callback) {
     xhttp.send();
 }
 
-fetchData(`${API}/1`,(error1,data1)=>{
-    if(error1){return console.error(error1);}
-    console.log(data1);
-})
+// fetchData(`${API}/1`,(error1,data1)=>{
+//     if(error1){return console.error(error1);}
+//     console.log(data1);
+// })
